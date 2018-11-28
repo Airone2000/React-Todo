@@ -11,3 +11,48 @@
   padding: 10px;
   color: #fff;
 }
+
+.todo-input
+{
+  margin-bottom: 10px;
+}
+
+.todo-input .inline-controls
+{
+  display:flex;
+}
+
+.todo-input input
+{
+  flex: 1 1 auto;
+  border: 0;
+  padding: 5px;
+  outline: 0;
+  color: #999;
+}
+
+.todo-input input:focus::placeholder
+{
+  color: #333;
+}
+
+.todo-input input:focus
+{
+  color: #000;
+}
+
+.todo-input button
+{
+  border: 0;
+  background-color: #ed7f10;
+  font-weight: bold;
+  border-left: 1px solid #333;
+  text-transform: uppercase;
+  opacity: .7;
+  cursor:pointer;
+}
+
+.todo-input button:hover
+{
+  opacity: 1;
+}
