@@ -73,3 +73,28 @@ ul.todolist li:not(:last-child)
 {
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
+
+.todolist-item
+{
+  display:flex;
+}
+
+.todo-title
+{
+  flex: 1 1 auto;
+}
+
+.todo-delete-btn
+{
+  text-transform: uppercase;
+  background-color: #C60800;
+  border: 0;
+  color: #fff;
+  cursor:pointer;
+  opacity: .7;
+}
+
+.todo-delete-btn:hover
+{
+  opacity: 1;
+}

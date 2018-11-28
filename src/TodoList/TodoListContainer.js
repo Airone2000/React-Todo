@@ -26,12 +26,23 @@ class TodoList extends React.Component
     });
   };
 
+  deleteTodoFromState = (todoToDelete) => {
+    const todo = [...this.state.todo];
+    const indexOfTodo = todo.indexOf(todoToDelete);
+    if(indexOfTodo > -1) {
+      todo.splice(indexOfTodo, 1);
+      this.setState({todo});
+    }
+  }
 
   render() {
     return (
       <div className="todolist-container">
         <TodoInput onAddTodo={this.addTodoToState} />
-        <TodoListUl todoCollection={this.state.todo} />
+        <TodoListUl 
+          todoCollection={this.state.todo}
+          onDeleteTodo={this.deleteTodoFromState}
+        />
       </div>
     );
   }

@@ -2,14 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TodoListItem from './TodoListItem';
 
-function TodoList({todoCollection}) {
+function TodoList({todoCollection, onDeleteTodo}) {
   return (
     <ul className="todolist">
     {todoCollection.map(todo =>
       <li 
         key={todo.id}
       >
-        <TodoListItem todo={todo} />
+        <TodoListItem 
+          todo={todo}
+          onDeleteTodo={() => onDeleteTodo(todo)} 
+        />
       </li>
     )}
     </ul>

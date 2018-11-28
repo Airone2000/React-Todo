@@ -1,11 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function TodoListItem({todo}) {
+function TodoListItem({todo, onDeleteTodo}) {
   const {title} = todo;
   return (
     <div className="todolist-item">
-      {title}
+      <div className="todo-title">
+        {title}
+      </div>
+      <button 
+        className="todo-delete-btn"
+        onClick={onDeleteTodo}
+      >
+        -Delete
+      </button>
     </div>
   );
 }
