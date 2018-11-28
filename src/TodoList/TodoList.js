@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import TodoListItem from './TodoListItem';
 
 function TodoList({todoCollection}) {
   return (
@@ -8,7 +9,7 @@ function TodoList({todoCollection}) {
       <li 
         key={todo.id}
       >
-        {todo.title}
+        <TodoListItem todo={todo} />
       </li>
     )}
     </ul>
