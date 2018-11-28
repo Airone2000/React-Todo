@@ -19,10 +19,10 @@ class TodoList extends React.Component
 
   addTodoToState = (todo) => {
     this.setState({
-      todo: [...this.state.todo, {
+      todo: [{
         id: this.state.todo.length + 1,
         title: todo
-      }]
+      }, ...this.state.todo]
     });
   };
 
