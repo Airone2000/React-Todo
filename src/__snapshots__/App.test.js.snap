@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders once again but with google as href 1`] = `
+<a
+  href="google.us"
+>
+  GOOGLE US
+</a>
+`;
+
+exports[`renders without crashing 1`] = `
+<a
+  href="index.html"
+>
+  Mon bouton
+</a>
+`;
+
+exports[`will test object 1`] = `
+Object {
+  "createdAt": Any<Date>,
+  "id": Any<Number>,
+  "name": StringMatching /Florence/,
+}
+`;
