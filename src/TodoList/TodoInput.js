@@ -1,10 +1,20 @@
 import React from 'react';
 
-function TodoInput() {
+function TodoInput({onAddTodo}) {
+
+  let ref = React.createRef();
+
   return (
-    <form className="todo-input">
+    <form 
+      className="todo-input"
+      onSubmit={event => {
+        event.preventDefault();
+        onAddTodo(ref.current.value);
+        ref.current.value = '';
+      }}
+    >
       <div className="inline-controls">
-        <input type="text" placeholder="Type-in your todo ..." />
+        <input type="text" ref={ref} placeholder="Type-in your todo ..." />
         <button type="submit">+Add</button>
       </div>
     </form>

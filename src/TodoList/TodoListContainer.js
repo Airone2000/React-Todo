@@ -17,10 +17,20 @@ class TodoList extends React.Component
     ]
   };
 
+  addTodoToState = (todo) => {
+    this.setState({
+      todo: [...this.state.todo, {
+        id: this.state.todo.length + 1,
+        title: todo
+      }]
+    });
+  };
+
+
   render() {
     return (
       <div className="todolist-container">
-        <TodoInput />
+        <TodoInput onAddTodo={this.addTodoToState} />
         <TodoListUl todoCollection={this.state.todo} />
       </div>
     );
