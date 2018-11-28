@@ -1,11 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function TodoListItem({todo, onDeleteTodo}) {
+function TodoListItem({todo, onDeleteTodo, onToggleTodo}) {
   const {title} = todo;
   return (
     <div className="todolist-item">
-      <div className="todo-title">
+      <input 
+        type="checkbox"
+        onChange={onToggleTodo}
+        checked={todo.done}
+      />
+      <div className={'todo-title ' + (todo.done && 'done')}>
         {title}
       </div>
       <button 

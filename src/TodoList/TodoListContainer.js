@@ -8,11 +8,13 @@ class TodoList extends React.Component
     todo: [
       {
         id: 1,
-        title: 'Faire la cuisine'
+        title: 'Faire la cuisine',
+        done: false
       },
       {
         id: 2,
-        title: 'Repasser le linge'
+        title: 'Repasser le linge',
+        done: true
       }
     ]
   };
@@ -24,6 +26,7 @@ class TodoList extends React.Component
         title: todo
       }, ...this.state.todo]
     });
+    console.log('ADDED');
   };
 
   deleteTodoFromState = (todoToDelete) => {
@@ -32,6 +35,17 @@ class TodoList extends React.Component
     if(indexOfTodo > -1) {
       todo.splice(indexOfTodo, 1);
       this.setState({todo});
+      console.log('DELETED');
+    }
+  }
+
+  toggleTodoStatus = (todoToToggle) => {
+    const todo = [...this.state.todo];
+    const indexOfTodo = todo.indexOf(todoToToggle);
+    if(indexOfTodo > -1) {
+      todo[indexOfTodo]['done'] = !todo[indexOfTodo]['done'];
+      this.setState({todo});
+      console.log('TOGGLED');
     }
   }
 
@@ -42,6 +56,7 @@ class TodoList extends React.Component
         <TodoListUl 
           todoCollection={this.state.todo}
           onDeleteTodo={this.deleteTodoFromState}
+          onToggleTodo={this.toggleTodoStatus}
         />
       </div>
     );

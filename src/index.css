@@ -84,6 +84,11 @@ ul.todolist li:not(:last-child)
   flex: 1 1 auto;
 }
 
+.todo-title.done
+{
+  text-decoration: line-through;
+}
+
 .todo-delete-btn
 {
   text-transform: uppercase;

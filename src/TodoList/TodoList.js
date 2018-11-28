@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TodoListItem from './TodoListItem';
 
-function TodoList({todoCollection, onDeleteTodo}) {
+function TodoList({todoCollection, onDeleteTodo, onToggleTodo}) {
   return (
     <ul className="todolist">
     {todoCollection.map(todo =>
@@ -12,6 +12,7 @@ function TodoList({todoCollection, onDeleteTodo}) {
         <TodoListItem 
           todo={todo}
           onDeleteTodo={() => onDeleteTodo(todo)} 
+          onToggleTodo={() => onToggleTodo(todo)}
         />
       </li>
     )}
