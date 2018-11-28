@@ -56,3 +56,19 @@
 {
   opacity: 1;
 }
+
+ul.todolist
+{
+  list-style: none;
+  padding: 0;
+}
+
+ul.todolist li
+{
+  padding: 10px;
+}
+
+ul.todolist li:not(:last-child)
+{
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
