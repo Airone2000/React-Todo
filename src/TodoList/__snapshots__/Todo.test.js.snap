@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a TodoListItem 1`] = `
+<div
+  className="todolist-item"
+>
+  <input
+    checked={true}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <div
+    className="todo-title done"
+  >
+    Une todo
+  </div>
+  <button
+    className="todo-delete-btn"
+    onClick={[Function]}
+  >
+    -Delete
+  </button>
+</div>
+`;
