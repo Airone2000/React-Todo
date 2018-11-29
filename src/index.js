@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {default as TodoContainer} from './TodoList/TodoListContainer';
-import './index.css';
+import App from './App';
 
 ReactDOM.render(
-  <TodoContainer />,
+  <App />,
   document.querySelector('#root')
 );

@@ -104,3 +104,27 @@ ul.todolist li:not(:last-child)
 {
   opacity: 1;
 }
+
+.main-menu
+{
+  display: flex;
+  padding: 0 5px;
+  list-style: none;
+}
+
+.main-menu li
+{
+  
+}
+
+.main-menu li:not(:last-child)::after
+{
+  content: '|';
+  margin: 0 5px;
+}
+
+.main-menu li a
+{
+  text-decoration: none;
+  color: #000;
+}
